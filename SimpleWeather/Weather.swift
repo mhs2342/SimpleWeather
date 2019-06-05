@@ -37,7 +37,8 @@ struct Coord: Codable {
 struct Main: Codable {
     let temp, pressure: Double
     let humidity: Int
-    let tempMin, tempMax, seaLevel, grndLevel: Double
+    let tempMin, tempMax: Double
+    let seaLevel, grndLevel: Double?
     
     enum CodingKeys: String, CodingKey {
         case temp, pressure, humidity

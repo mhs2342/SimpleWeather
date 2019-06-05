@@ -14,18 +14,23 @@ enum WeatherServiceError: Error {
 
 struct WeatherService {
     func getCurrentWeather(lat: Double, long: Double, completion: @escaping (Result<Weather, Error>) -> Void) {
-//        api.openweathermap.org/data/2.5/weather?lat=35&lon=139
+        let path = [
+            "lat": String(lat),
+            "lon": String(long),
+            "APPID": "297d9dee175272ae68b2c1006f35d7a1",
+            "units": "imperial"
+        ]
+
         var components = URLComponents()
         components.scheme = "https"
         components.host = "api.openweathermap.org"
         components.path = "/data/2.5/weather"
-        components.queryItems = [
-            URLQueryItem(name: "lat", value: String(lat)),
-            URLQueryItem(name: "lon", value: String(long)),
-            URLQueryItem(name: "APPID", value: "297d9dee175272ae68b2c1006f35d7a1")
-        ]
+        components.queryItems = path.compactMap({ URLQueryItem(name: $0, value: $1 )})
+        
         guard let url = components.url else {
-            completion(.failure(WeatherServiceError.badURL))
+            DispatchQueue.main.async {
+                completion(.failure(WeatherServiceError.badURL))
+            }
             return
         }
         
@@ -38,9 +43,13 @@ struct WeatherService {
             if let data = data {
                 do {
                     let weather = try JSONDecoder().decode(Weather.self, from: data)
-                    completion(.success(weather))
+                    DispatchQueue.main.async {
+                        completion(.success(weather))
+                    }
                 } catch {
-                    completion(.failure(error))
+                    DispatchQueue.main.async {
+                        completion(.failure(error))
+                    }
                 }
             }
         }
