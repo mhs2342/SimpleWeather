@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a5U-FC-I37">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="SimpleWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="942-wi-fjI">
+                                <rect key="frame" x="16" y="116" width="132" height="76.5"/>
+                                <string key="text">Simple
+Weather</string>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The weather and nothing else." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANj-21-b2M">
+                                <rect key="frame" x="16" y="200.5" width="256.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMJ-gD-JrZ">
+                                <rect key="frame" x="16" y="319" width="61" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <state key="normal" title="Allow">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="allowLocationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X5t-xg-iwB"/>
+                                    <segue destination="3hQ-JU-lKm" kind="show" destinationCreationSelector="showWeatherViewController:" id="Xg8-QE-NzE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow us to use your location so you don't have to bother with typing " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epP-Am-pZs">
+                                <rect key="frame" x="16" y="232.5" width="390" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="lMJ-gD-JrZ" firstAttribute="leading" secondItem="epP-Am-pZs" secondAttribute="leading" id="1Jb-3V-g72"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="942-wi-fjI" secondAttribute="trailing" symbolic="YES" id="7ft-eX-F8T"/>
+                            <constraint firstItem="epP-Am-pZs" firstAttribute="leading" secondItem="ANj-21-b2M" secondAttribute="leading" id="D3z-qS-S4k"/>
+                            <constraint firstItem="lMJ-gD-JrZ" firstAttribute="top" secondItem="epP-Am-pZs" secondAttribute="bottom" constant="38.5" id="IHC-Tf-Tir"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lMJ-gD-JrZ" secondAttribute="trailing" constant="337" id="NGp-Qm-foa"/>
+                            <constraint firstItem="942-wi-fjI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="72" id="Rf0-dm-YhT"/>
+                            <constraint firstItem="ANj-21-b2M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Vzg-jd-pUp"/>
+                            <constraint firstItem="epP-Am-pZs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-8" id="Zdk-fU-dqJ"/>
+                            <constraint firstItem="ANj-21-b2M" firstAttribute="top" secondItem="942-wi-fjI" secondAttribute="bottom" constant="8" id="eQl-OS-9Zn"/>
+                            <constraint firstItem="942-wi-fjI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="h23-NZ-1e9"/>
+                            <constraint firstItem="epP-Am-pZs" firstAttribute="top" secondItem="ANj-21-b2M" secondAttribute="bottom" constant="8" id="jhu-vg-27w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ANj-21-b2M" secondAttribute="trailing" constant="141.5" id="kBw-Br-Yqn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SCU-S1-NC8"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="109.82142857142857"/>
+        </scene>
+        <!--Weather View Controller-->
+        <scene sceneID="dEw-HA-x3M">
+            <objects>
+                <viewController id="3hQ-JU-lKm" customClass="WeatherViewController" customModule="SimpleWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2l0-i6-axD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Determining Location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bII-xV-N8f">
+                                <rect key="frame" x="16" y="116" width="334" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- °" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2T-R8-NOr">
+                                <rect key="frame" x="16" y="197" width="46" height="51"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="bII-xV-N8f" firstAttribute="top" secondItem="NaU-LM-Ot4" secondAttribute="top" constant="72" id="0z8-8S-JO8"/>
+                            <constraint firstItem="NaU-LM-Ot4" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bII-xV-N8f" secondAttribute="trailing" symbolic="YES" id="KkF-Wy-89I"/>
+                            <constraint firstItem="M2T-R8-NOr" firstAttribute="top" secondItem="bII-xV-N8f" secondAttribute="bottom" constant="42.5" id="eQx-xR-4a2"/>
+                            <constraint firstItem="NaU-LM-Ot4" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="M2T-R8-NOr" secondAttribute="trailing" symbolic="YES" id="er1-Py-if4"/>
+                            <constraint firstItem="M2T-R8-NOr" firstAttribute="leading" secondItem="bII-xV-N8f" secondAttribute="leading" id="fvI-b3-poC"/>
+                            <constraint firstItem="bII-xV-N8f" firstAttribute="leading" secondItem="NaU-LM-Ot4" secondAttribute="leading" constant="16" id="mQC-de-vgi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NaU-LM-Ot4"/>
+                    </view>
+                    <connections>
+                        <outlet property="locationLabel" destination="bII-xV-N8f" id="SFF-6d-Xyc"/>
+                        <outlet property="tempLabel" destination="M2T-R8-NOr" id="riL-Mi-d0V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Shp-fr-DHg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852.1739130434785" y="109.82142857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="172-WE-kAX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="a5U-FC-I37" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Usu-Ne-Aug">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0QL-xs-nh6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="os5-Vh-yUk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+</document>
