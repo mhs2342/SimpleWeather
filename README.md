@@ -1,5 +1,8 @@
 # Dependency Injection with Storyboards
 
+## Requirements
+* Xcode 11
+
 Before Xcode 11 there was no way inject dependencies into storyboarded view controllers using a custom initializer. Xcode 11 introduced `@IBSegueAction` which allows you to intercept a segue and use your own default initializer. Attaching the `@IBSegueAction` attribute to any function allows that function to be dynamically called at run-time when the owning view controller is about to segue to another view controller.
 
 ## Example
