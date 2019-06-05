@@ -115,9 +115,7 @@
 				A32EAB0022A7F81F004755FF /* LaunchScreen.storyboard */,
 				A32EAB0322A7F81F004755FF /* Info.plist */,
 				A32EAB2522A80352004755FF /* WeatherViewController.swift */,
-				A3B6570C22A80A77000FE9E0 /* LocationManager.swift */,
-				A3B6570E22A80E28000FE9E0 /* WeatherService.swift */,
-				A3B6571022A8116C000FE9E0 /* Weather.swift */,
+				A3C7F7A522A821B5000134E1 /* Services */,
 			);
 			path = SimpleWeather;
 			sourceTree = "<group>";
@@ -138,6 +136,16 @@
 				A32EAB1922A7F820004755FF /* Info.plist */,
 			);
 			path = SimpleWeatherUITests;
+			sourceTree = "<group>";
+		};
+		A3C7F7A522A821B5000134E1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A3B6570C22A80A77000FE9E0 /* LocationManager.swift */,
+				A3B6570E22A80E28000FE9E0 /* WeatherService.swift */,
+				A3B6571022A8116C000FE9E0 /* Weather.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
